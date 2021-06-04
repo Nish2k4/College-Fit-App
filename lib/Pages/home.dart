@@ -8,22 +8,24 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.indigo [600],
-      appBar: AppBar(
-        backgroundColor: Colors.yellow [800],
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.center, // Centers the text and logo
-          children: [
-            Text("College Fit "),
-            Image.asset(
-              "Images/FinalLogo.png",
-              fit: BoxFit.contain,
-              height: 32,
-            ),
-          ],
+    return MaterialApp(
+      //debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        backgroundColor: Colors.indigo [800],
+        appBar: AppBar(
+          backgroundColor: Colors.yellow [800],
+          title: Row(
+            mainAxisAlignment: MainAxisAlignment.center, // Centers the text and logo
+            children: [
+              Text("College Fit "),
+              Image.asset(
+                "Images/FinalLogo.png",
+                fit: BoxFit.contain,
+                height: 32,
+              ),
+            ],
+          ),
         ),
-      ),
       body: SafeArea( // Prevents us from placing widgets on the curved areas of the screen
         child: Padding( // Space from other elements
           padding: const EdgeInsets.fromLTRB(0, 30, 0, 0),
@@ -65,7 +67,7 @@ class _HomeState extends State<Home> {
                     filled: true,
                     border: OutlineInputBorder(),
                     hintText: "Search",
-                    fillColor: Colors.white,
+                    fillColor: Colors.white70,
                   ),
                 ),
               ),
@@ -94,7 +96,7 @@ class _HomeState extends State<Home> {
                       child: Ink(
                         decoration: BoxDecoration(
                           gradient: LinearGradient(
-                            colors: [Color(0xff374ABE), Color(0xff64B6FF)],
+                            colors: [Color(0xFF01579B), Color(0xFF0277BD)],
                             begin: Alignment.topLeft,
                             end: Alignment.topRight,
                           ),
@@ -115,9 +117,58 @@ class _HomeState extends State<Home> {
                   ),
                 ],
               ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget> [
+                  Container( // Create a Search button
+                    width: 200,
+                    height: 47,
+                    margin: EdgeInsets.only(top: 30),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(30),
+                      // Add shadow behind the button
+                      boxShadow: <BoxShadow> [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.1),
+                          blurRadius: 1,
+                          offset: Offset(10, 10),
+                        ),
+                      ],
+                    ),
+                    child: RaisedButton(
+                      onPressed: (){
+                        Navigator.pushNamed(context, "/collegeList");
+                      },
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
+                      padding: EdgeInsets.all(0),
+                      child: Ink(
+                        decoration: BoxDecoration(
+                            gradient: LinearGradient(
+                              colors: [Color(0xFF01579B), Color(0xFF0277BD)],
+                              begin: Alignment.topLeft,
+                              end: Alignment.topRight,
+                            ),
+                            borderRadius: BorderRadius.circular(47)),
+                        child: Container(
+                          constraints: BoxConstraints(maxWidth: 400, maxHeight: 200),
+                          alignment: Alignment.center, //Text placement in the button
+                          child: Text(
+                            "College List",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 14,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ],
           ),
         ),
+      ),
       ),
     );
   }
