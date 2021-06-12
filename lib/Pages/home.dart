@@ -61,21 +61,13 @@ class _HomeState extends State<Home> {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: 8, vertical: 5),
-                child: TextField(
-                  decoration: InputDecoration(
-                    filled: true,
-                    border: OutlineInputBorder(),
-                    hintText: "Search",
-                    fillColor: Colors.white70,
-                  ),
-                ),
+                padding: EdgeInsets.symmetric(horizontal: 8, vertical: 20),
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget> [
                   Container( // Create a Search button
-                    width: 160,
+                    width: 200,
                     height: 47,
                     margin: EdgeInsets.only(top: 30),
                     decoration: BoxDecoration(
@@ -102,10 +94,10 @@ class _HomeState extends State<Home> {
                           ),
                           borderRadius: BorderRadius.circular(47)),
                         child: Container(
-                          constraints: BoxConstraints(maxWidth: 300, maxHeight: 50),
+                          constraints: BoxConstraints(maxWidth: 350, maxHeight: 50),
                           alignment: Alignment.center, //Text placement in the button
                           child: Text(
-                            "Search",
+                            "Search College",
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: 14,

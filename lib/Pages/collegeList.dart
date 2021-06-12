@@ -33,7 +33,7 @@ class _collegeListState extends State<collegeList> {
               child: Card(
                 child: ListTile(
                   onTap: (){},
-                  title: Text(colleges[index].location),
+                  title: Text(colleges[index].name),
                   leading: CircleAvatar(
                     backgroundImage: AssetImage("Images/gatech_logo.jpg"),
                   ),

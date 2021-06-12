@@ -10,7 +10,7 @@
 		</data>
 		<key>flutter_assets/AssetManifest.json</key>
 		<data>
-		vBR2P2H/e7Gch1/RRgK/4EFxB1c=
+		TeoiUpkiMMQaYZT5Fk/B9+04r08=
 		</data>
 		<key>flutter_assets/FontManifest.json</key>
 		<data>
@@ -19,6 +19,10 @@
 		<key>flutter_assets/Images/FinalLogo.png</key>
 		<data>
 		7Q5CZrF/U3o4r61obZ6quSpKdZQ=
+		</data>
+		<key>flutter_assets/Images/gatech_logo.jpg</key>
+		<data>
+		klFyGHDvVUfSNG9jzSrEMh5e6ts=
 		</data>
 		<key>flutter_assets/NOTICES</key>
 		<data>
@@ -34,7 +38,7 @@
 		</data>
 		<key>flutter_assets/kernel_blob.bin</key>
 		<data>
-		thURJ/wZnVe+CT/D1zFu/RuOURg=
+		DzlKfUrHtXPcw+oB5Eqv/i697kM=
 		</data>
 		<key>flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
 		<data>
@@ -51,11 +55,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			vBR2P2H/e7Gch1/RRgK/4EFxB1c=
+			TeoiUpkiMMQaYZT5Fk/B9+04r08=
 			</data>
 			<key>hash2</key>
 			<data>
-			16gbTFL0zAS/uS1OrbaNaURRioWhqi0oEYE6CjDztJI=
+			ejakt6RA20IT7WL3D9gDvPKWGQ5tTFhX/28H4Q7kqys=
 			</data>
 		</dict>
 		<key>flutter_assets/FontManifest.json</key>
@@ -78,6 +82,17 @@
 			<key>hash2</key>
 			<data>
 			InIKMSnY87FXFNrcwVxf5RGz+pdLuxdR5iXqZPf0ojI=
+			</data>
+		</dict>
+		<key>flutter_assets/Images/gatech_logo.jpg</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			klFyGHDvVUfSNG9jzSrEMh5e6ts=
+			</data>
+			<key>hash2</key>
+			<data>
+			5upSsWc8aCgmICKMvTf2yTIsfNrT0FgThSEUTVuMwCQ=
 			</data>
 		</dict>
 		<key>flutter_assets/NOTICES</key>
@@ -117,11 +132,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			thURJ/wZnVe+CT/D1zFu/RuOURg=
+			DzlKfUrHtXPcw+oB5Eqv/i697kM=
 			</data>
 			<key>hash2</key>
 			<data>
-			kZ9mBYUC7PsHxxPzgmxvBBruXyiu+ZckhDa1yyGW7Eg=
+			GLsItVEhn6dTraAgk5W1noAV5UEBwBIy/St7+tbcGNQ=
 			</data>
 		</dict>
 		<key>flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
