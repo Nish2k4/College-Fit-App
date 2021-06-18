@@ -82,7 +82,9 @@ class _HomeState extends State<Home> {
                       ],
                     ),
                     child: RaisedButton(
-                      onPressed: (){},
+                      onPressed: (){
+                        Navigator.pushNamed(context, "/search");
+                      },
                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
                       padding: EdgeInsets.all(0),
                       child: Ink(

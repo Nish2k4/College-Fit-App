@@ -9,7 +9,7 @@ import 'package:college_app/Pages/search.dart';
 void main() {
   runApp(MaterialApp(
     // Routing System
-    initialRoute: "/search",
+    initialRoute: "/home",
     routes: {
       "/": (context) => Loading(),
       "/home": (context) => Home(),
