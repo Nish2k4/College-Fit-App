@@ -4,7 +4,7 @@ class search extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.cyan [800],
+      backgroundColor: Colors.blue [900],
         appBar: AppBar(
           backgroundColor: Colors.yellow [800],
           title: Text ("Search"),

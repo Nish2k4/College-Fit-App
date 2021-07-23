@@ -11,7 +11,7 @@ class _HomeState extends State<Home> {
     return MaterialApp(
       //debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Colors.cyan [800],
+        backgroundColor: Colors.indigo [800],
         appBar: AppBar(
           backgroundColor: Colors.yellow [800],
           title: Row(
@@ -90,7 +90,7 @@ class _HomeState extends State<Home> {
                       child: Ink(
                         decoration: BoxDecoration(
                           gradient: LinearGradient(
-                            colors: [Color(0xFF00695C), Color(0xFF009698)],
+                            colors: [Color(0xFF01579B), Color(0xFF0277BD)],
                             begin: Alignment.topLeft,
                             end: Alignment.topRight,
                           ),
@@ -138,7 +138,7 @@ class _HomeState extends State<Home> {
                       child: Ink(
                         decoration: BoxDecoration(
                             gradient: LinearGradient(
-                              colors: [Color(0xFF00695C), Color(0xFF009698)],
+                              colors: [Color(0xFF01579B), Color(0xFF0277BD)],
                               begin: Alignment.topLeft,
                               end: Alignment.topRight,
                             ),
