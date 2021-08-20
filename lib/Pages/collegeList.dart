@@ -18,7 +18,7 @@ class _collegeListState extends State<collegeList> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.indigo [800],
+      backgroundColor: Colors.cyan [800],
       appBar: AppBar(
         backgroundColor: Colors.yellow [800],
         title: Text ("Choose College"),
@@ -32,7 +32,9 @@ class _collegeListState extends State<collegeList> {
               padding: const EdgeInsets.symmetric(vertical: 1.0, horizontal: 4.0),
               child: Card(
                 child: ListTile(
-                  onTap: (){},
+                  onTap: (){
+                    Navigator.pushNamed(context, "/collegePage");
+                  },
                   title: Text(colleges[index].name),
                   leading: CircleAvatar(
                     backgroundImage: AssetImage("Images/gatech_logo.jpg"),
