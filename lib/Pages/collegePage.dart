@@ -1,15 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:expandable_text/expandable_text.dart';
-import 'package:flutter_html/flutter_html.dart';
 
 class CollegePage{
 
   String name; // Name of the college
-  String link; // Location of the college
+  String location; // Location of the college
   String logo; // Logo of the college
 
-  CollegePage({this.name, this.link, this.logo});
+  CollegePage({this.name, this.location, this.logo});
 }
 
 class collegePage extends StatefulWidget {
@@ -17,14 +16,8 @@ class collegePage extends StatefulWidget {
   _collegePageState createState() => _collegePageState();
 }
 
-
-
-
 class _collegePageState extends State<collegePage> {
 
-final htmlData = r"""
-  <h3> There are various options for student living. Some of the living options are on-campus while some a few minutes away from campus. Here is an extensive list of the residence halls: <a> https://housing.gatech.edu/explore-our-residence-halls </a></h3>
-""";
 
 
   @override
@@ -126,7 +119,7 @@ final htmlData = r"""
                         icon: Icon(Icons.school, color: Colors.blue [200],),
                       ),
                       Text(
-                        "Acceptance Rate: 21%",
+                        "Graduation Rate: 86.2%",
                         style: TextStyle(
                           fontSize: 18,
                           color: Colors.black54,
@@ -142,10 +135,29 @@ final htmlData = r"""
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: <Widget>[
                       IconButton(
-                        icon: Icon(Icons.map, color: Colors.lightGreen,),
+                        icon: Icon(Icons.monetization_on, color: Colors.green [500],),
                       ),
                       Text(
-                        "Area: Urban",
+                        "Average Tuition: \$12,600 - \$34,000",
+                        style: TextStyle(
+                          fontSize: 17,
+                          color: Colors.black54,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(8, 0, 8, 8),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: <Widget>[
+                      IconButton(
+                        icon: Icon(Icons.map, color: Colors.yellowAccent,),
+                      ),
+                      Text(
+                        "Area: Downtown / Urban",
                         style: TextStyle(
                           fontSize: 18,
                           color: Colors.black54,
@@ -173,7 +185,7 @@ final htmlData = r"""
                         Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Text(
-                            "The Georgia Institute of Technology is a top 10 public research university with nearly 40,000 students who study in person at the main campus in Atlanta, at Georgia Tech-Lorraine in France, at Georgia Tech-Shenzhen in China, as well as through distance and online learning.",
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
                             style: TextStyle(
                                 fontSize: 15.0,
                                 color: Colors.white
@@ -189,7 +201,7 @@ final htmlData = r"""
                       collapsedBackgroundColor: Colors.black54,
                       backgroundColor: Colors.black,
                       title: Text(
-                        "Popular Majors",
+                        "Prerequisites",
                         textAlign: TextAlign.center,
                         style: TextStyle(
                             fontSize: 20.0,
@@ -201,7 +213,35 @@ final htmlData = r"""
                         Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Text(
-                            "1. Engineering\n2. Computer Science\n3. Business\n4. Biology\n5. Physics",
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                            style: TextStyle(
+                                fontSize: 15.0,
+                                color: Colors.white
+                            ),
+                          ),
+                        ),
+                      ]
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: ExpansionTile(
+                      collapsedBackgroundColor: Colors.black54,
+                      backgroundColor: Colors.black,
+                      title: Text(
+                        "Top 5 Majors",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            fontSize: 20.0,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.amber
+                        ),
+                      ),
+                      children: <Widget>[
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text(
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
                             style: TextStyle(
                                 fontSize: 15.0,
                                 color: Colors.white
@@ -228,16 +268,12 @@ final htmlData = r"""
                       children: <Widget>[
                         Padding(
                           padding: const EdgeInsets.all(8.0),
-                          child: Html(
-                            data: htmlData,
-                            style: {
-                              "h3": Style(
-                                color: Color.fromRGBO(244, 244, 244, 1),
-                              ),
-                              "a": Style(
-                                color: Color.fromRGBO(62, 158, 199, 1),
-                              )
-                            },
+                          child: Text(
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                            style: TextStyle(
+                                fontSize: 15.0,
+                                color: Colors.white
+                            ),
                           ),
                         ),
                       ]
@@ -261,7 +297,7 @@ final htmlData = r"""
                         Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Text(
-                            "1. Tech Trolley\n2. Stingerette Paratransit\n3. Stinger Buses\n4. Midnight Rambler\n5. Emory Shuttle\n6. Stingerette Nighttime Shuttle\n7. Charter Bus Rental Services\n8. NARA/TEP Shuttle\n9. Weekend Grocery Shuttle",
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
                             style: TextStyle(
                                 fontSize: 15.0,
                                 color: Colors.white
@@ -289,7 +325,35 @@ final htmlData = r"""
                         Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Text(
-                            "Here is a link to an extensive list of the eating option at Georgia Tech: https://dining.gatech.edu/home",
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                            style: TextStyle(
+                                fontSize: 15.0,
+                                color: Colors.white
+                            ),
+                          ),
+                        ),
+                      ]
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: ExpansionTile(
+                      collapsedBackgroundColor: Colors.black54,
+                      backgroundColor: Colors.black,
+                      title: Text(
+                        "Weather",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            fontSize: 20.0,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.amber
+                        ),
+                      ),
+                      children: <Widget>[
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text(
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
                             style: TextStyle(
                                 fontSize: 15.0,
                                 color: Colors.white
@@ -317,7 +381,7 @@ final htmlData = r"""
                         Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Text(
-                            "Georgia Residents: Approximately \$22,912 to \$31,898\nNon-Georgia Residents: Approximately \$44,024 to \$53,010",
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
                             style: TextStyle(
                                 fontSize: 15.0,
                                 color: Colors.white
@@ -333,7 +397,7 @@ final htmlData = r"""
                       collapsedBackgroundColor: Colors.black54,
                       backgroundColor: Colors.black,
                       title: Text(
-                        "Major Attractions Nearby",
+                        "Major Attraction Nearby",
                         textAlign: TextAlign.center,
                         style: TextStyle(
                             fontSize: 20.0,
@@ -345,7 +409,7 @@ final htmlData = r"""
                         Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Text(
-                            "World of Coca-Cola\nGeorgia Aquarium\nNational Center for Civil and Human Rights",
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
                             style: TextStyle(
                               fontSize: 15.0,
                               color: Colors.white
@@ -364,3 +428,4 @@ final htmlData = r"""
   }
 
 }
+

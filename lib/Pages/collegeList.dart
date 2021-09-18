@@ -8,19 +8,13 @@ class collegeList extends StatefulWidget {
 class _collegeListState extends State<collegeList> {
   // BACK END CODE
   List<CollegePage> colleges = [
-    CollegePage(name: "Georgia Tech", link: "/collegePage", logo: "georgiaTech.png"),
-    CollegePage(name: "University of Georgia", link: "/ugaPage", logo: "uga.png"),
-    CollegePage(name: "Georgia State University", link: "/gsuPage", logo: "gsu.png"),
-    //CollegePage(name: "UT Austin", link: "", logo: "UtAustin.png"),
-    //CollegePage(name: "University of Texas at Dallas", link: "", logo: "utd.png"),
-    //CollegePage(name: "Stanford", link: "", logo: "stanford.png")
+    CollegePage(name: "Harvard", location: "Massachusetts", logo: "harvard.png"),
+    CollegePage(name: "Georgia Tech", location: "Georgia", logo: "georgiaTech.png"),
+    CollegePage(name: "Georgia State", location: "Georgia", logo: "georgiaState.png"),
+    CollegePage(name: "UT Austin", location: "Texas", logo: "UtAustin.png"),
+    CollegePage(name: "University of Texas at Dallas", location: "Texas", logo: "utd.png"),
+    CollegePage(name: "Stanford", location: "California", logo: "stanford.png")
   ];
-  void UpdateCollege(index){
-    CollegePage instance = colleges[index];
-    Navigator.pop(context, {
-      "logo": instance.logo,
-    });
-  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,12 +33,11 @@ class _collegeListState extends State<collegeList> {
               child: Card(
                 child: ListTile(
                   onTap: (){
-                    Navigator.pushNamed(context, "${colleges[index].link}");
-                    //UpdateCollege(index);
+                    Navigator.pushNamed(context, "/collegePage");
                   },
                   title: Text(colleges[index].name),
                   leading: CircleAvatar(
-                    backgroundImage: AssetImage('Images/${colleges[index].logo}'),
+                    backgroundImage: AssetImage("Images/gatech_logo.jpg"),
                   ),
                 ),
               ),
