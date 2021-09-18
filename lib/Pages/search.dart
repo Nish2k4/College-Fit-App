@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:college_app/Pages/collegePage.dart';
+
 
 class search extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue [900],
+      backgroundColor: Colors.cyan [800],
         appBar: AppBar(
           backgroundColor: Colors.yellow [800],
           title: Text ("Search"),
@@ -66,6 +68,25 @@ class DataSearch extends SearchDelegate <String> { // SearchDelegate is the sear
   Widget buildResults(BuildContext context) {
     // Results based on search
     //throw UnimplementedError();
+    return Center(
+      child: Container(
+        height: 80,
+        width: 140,
+        child: Card(
+          color: Colors.blueGrey,
+          child: Center(
+            child: Text(
+                query,
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.lightGreen,
+                  ),
+            ),
+          ),
+        ),
+      ),
+    );
   }
 
   @override
@@ -75,6 +96,11 @@ class DataSearch extends SearchDelegate <String> { // SearchDelegate is the sear
     final suggestionList = query.isEmpty?RecentColleges:colleges.where((p) => p.startsWith(query)).toList();
     return ListView.builder(
       itemBuilder: (context, index) => ListTile(
+        onTap: (){
+          //showResults(context)
+          Navigator.pushNamed(context, "/collegePage");
+        },
+
         leading: Icon(Icons.school_outlined),
         title: RichText(
           text: TextSpan(

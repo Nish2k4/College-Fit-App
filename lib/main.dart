@@ -4,6 +4,9 @@ import 'package:college_app/Pages/collegeList.dart';
 import 'package:college_app/Pages/collegePage.dart';
 import 'package:college_app/Pages/loading.dart';
 import 'package:college_app/Pages/search.dart';
+import 'package:college_app/Pages/test.dart';
+import 'package:college_app/Pages/colleges/ugaPage.dart';
+import 'package:college_app/Pages/colleges/gsuPage.dart';
 
 
 void main() {
@@ -16,6 +19,9 @@ void main() {
       "/collegePage": (context) => collegePage(),
       "/collegeList": (context) => collegeList(),
       "/search": (context) => search(),
+      "/test": (context) => test(),
+      "/ugaPage": (context) => ugaPage(),
+      "/gsuPage": (context) => gsuPage(),
     },
   ));
 }
